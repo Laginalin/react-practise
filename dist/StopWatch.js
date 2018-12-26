@@ -60,99 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(23);
-
-var _propTypes = __webpack_require__(35);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // 组件划分
-
-
-var StopWatch = function (_Component) {
-    _inherits(StopWatch, _Component);
-
-    function StopWatch() {
-        _classCallCheck(this, StopWatch);
-
-        return _possibleConstructorReturn(this, (StopWatch.__proto__ || Object.getPrototypeOf(StopWatch)).apply(this, arguments));
-    }
-
-    _createClass(StopWatch, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'stopwatch' },
-                _react2.default.createElement(MajorClock, null),
-                _react2.default.createElement(ControlButtons, null),
-                _react2.default.createElement(SplitTimes, null)
-            );
-        }
-    }]);
-
-    return StopWatch;
-}(_react.Component);
-// 不确定需不需要状态，先将三个组件定义为无状态函数
-// 状态提升
-
-
-var MajorClock = function MajorClock(_ref) {
-    // TODO: 返回数字时钟的JSX
-
-    var milliseconds = _ref.milliseconds;
-};
-
-MajorClock.propTypes = {
-    milliseconds: _propTypes2.default.number.isRequired
-};
-
-var ControlButtons = function ControlButtons(props) {
-    // TODO: 返回两个按钮的JSX
-};
-
-ControlButtons.propTypes = {
-    actived: _propTypes2.default.bool,
-    onStart: _propTypes2.default.func.isRequired,
-    onPause: _propTypes2.default.func.isRequired,
-    onSplit: _propTypes2.default.func.isRequired,
-    onReset: _propTypes2.default.func.isRequired
-};
-
-var SplitTimes = function SplitTimes(props) {
-    // TODO: 返回所有计次时间的JSX
-};
-
-SplitTimes.propTypes = {
-    splits: _propTypes2.default.arrayOf(_propTypes2.default.number)
-};
-
-(0, _reactDom.render)(_react2.default.createElement(StopWatch, null), document.getElementById('root'));
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -342,7 +254,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -384,22 +296,22 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(19);
-} else {
   module.exports = __webpack_require__(20);
+} else {
+  module.exports = __webpack_require__(21);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -439,6 +351,25 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
 
 /***/ }),
 /* 5 */
@@ -559,7 +490,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 7 */
@@ -619,7 +550,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 8 */
@@ -636,7 +567,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(4);
+var emptyFunction = __webpack_require__(3);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -688,7 +619,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */
@@ -842,7 +773,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -905,7 +836,7 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 12 */
@@ -1036,7 +967,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(25);
+var isTextNode = __webpack_require__(26);
 
 /*eslint-disable no-bitwise */
 
@@ -1115,7 +1046,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 17 */
@@ -1175,7 +1106,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 18 */
@@ -1192,7 +1123,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1244,10 +1175,211 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(24);
+
+var _propTypes = __webpack_require__(35);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _msToTime = __webpack_require__(40);
+
+var _msToTime2 = _interopRequireDefault(_msToTime);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // 组件划分
+
+
+var StopWatch = function (_Component) {
+    _inherits(StopWatch, _Component);
+
+    function StopWatch(props) {
+        _classCallCheck(this, StopWatch);
+
+        var _this = _possibleConstructorReturn(this, (StopWatch.__proto__ || Object.getPrototypeOf(StopWatch)).call(this, props));
+
+        _this.state = {
+            isStarted: false,
+            startTime: null,
+            currentTime: null,
+            splits: []
+        };
+        return _this;
+    }
+
+    _createClass(StopWatch, [{
+        key: 'onSplit',
+        value: function onSplit() {
+            this.setState({
+                splits: [].concat(_toConsumableArray(this.state.splits), [this.state.currentTime - this.state.startTime])
+            });
+        }
+    }, {
+        key: 'onStart',
+        value: function onStart() {
+            var _this2 = this;
+
+            this.setState({
+                isStarted: true,
+                startTime: new Date(),
+                currentTime: new Date()
+            });
+
+            this.intervalHandle = setInterval(function () {
+                _this2.setState({ currentTime: new Date() });
+            }, 1000 / 60);
+        }
+    }, {
+        key: 'onPause',
+        value: function onPause() {
+            clearInterval(this.intervalHandle);
+            this.setState({
+                isStarted: false
+            });
+        }
+    }, {
+        key: 'onReset',
+        value: function onReset() {
+            this.setState({
+                startTime: null,
+                currentTime: null,
+                splits: []
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _state = this.state,
+                isStarted = _state.isStarted,
+                startTime = _state.startTime,
+                currentTime = _state.currentTime,
+                splits = _state.splits;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'stopwatch' },
+                _react2.default.createElement(MajorClock, { milliseconds: currentTime - startTime }),
+                _react2.default.createElement(ControlButtons, {
+                    actived: isStarted,
+                    onPause: this.onPause.bind(this),
+                    onStart: this.onStart.bind(this),
+                    onReset: this.onReset.bind(this),
+                    onSplit: this.onSplit.bind(this)
+                }),
+                _react2.default.createElement(SplitTimes, { value: splits })
+            );
+        }
+    }]);
+
+    return StopWatch;
+}(_react.Component);
+// 不确定需不需要状态，先将三个组件定义为无状态函数
+// 状态提升
+
+
+var MajorClock = function MajorClock(_ref) {
+    var _ref$milliseconds = _ref.milliseconds,
+        milliseconds = _ref$milliseconds === undefined ? 0 : _ref$milliseconds;
+
+    // TODO: 返回数字时钟的JSX
+    return _react2.default.createElement(
+        'h1',
+        null,
+        (0, _msToTime2.default)(milliseconds)
+    );
+};
+
+MajorClock.propTypes = {
+    milliseconds: _propTypes2.default.number.isRequired
+};
+
+var ControlButtons = function ControlButtons(_ref2) {
+    var actived = _ref2.actived,
+        onStart = _ref2.onStart,
+        onPause = _ref2.onPause,
+        onSplit = _ref2.onSplit,
+        onReset = _ref2.onReset;
+
+    if (actived) {
+        return _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+                'button',
+                { onClick: onSplit },
+                '\u8BA1\u6B21'
+            ),
+            _react2.default.createElement(
+                'button',
+                { onClick: onPause },
+                '\u505C\u6B62'
+            )
+        );
+    } else {
+        return _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+                'button',
+                { onClick: onReset },
+                '\u590D\u4F4D'
+            ),
+            _react2.default.createElement(
+                'button',
+                { onClick: onStart },
+                '\u542F\u52A8'
+            )
+        );
+    }
+};
+
+ControlButtons.propTypes = {
+    actived: _propTypes2.default.bool,
+    onStart: _propTypes2.default.func.isRequired,
+    onPause: _propTypes2.default.func.isRequired,
+    onSplit: _propTypes2.default.func.isRequired,
+    onReset: _propTypes2.default.func.isRequired
+};
+
+var SplitTimes = function SplitTimes(_ref3) {
+    var _ref3$value = _ref3.value,
+        value = _ref3$value === undefined ? [] : _ref3$value;
+
+    // TODO: 返回所有计次时间的JSX
+    return value.map(function (item, index) {
+        return _react2.default.createElement(MajorClock, { key: index, milliseconds: item });
+    });
+};
+
+SplitTimes.propTypes = {
+    splits: _propTypes2.default.arrayOf(_propTypes2.default.number)
+};
+
+(0, _reactDom.render)(_react2.default.createElement(StopWatch, null), document.getElementById('root'));
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1260,7 +1392,7 @@ module.exports = warning;
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(5),n=__webpack_require__(6),p=__webpack_require__(4),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(5),n=__webpack_require__(6),p=__webpack_require__(3),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1275,7 +1407,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1300,8 +1432,8 @@ var _assign = __webpack_require__(5);
 var emptyObject = __webpack_require__(6);
 var invariant = __webpack_require__(7);
 var warning = __webpack_require__(8);
-var emptyFunction = __webpack_require__(4);
-var checkPropTypes = __webpack_require__(21);
+var emptyFunction = __webpack_require__(3);
+var checkPropTypes = __webpack_require__(22);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2637,10 +2769,10 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2656,7 +2788,7 @@ module.exports = react;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(7);
   var warning = __webpack_require__(8);
-  var ReactPropTypesSecret = __webpack_require__(22);
+  var ReactPropTypesSecret = __webpack_require__(23);
   var loggedTypeFailures = {};
 }
 
@@ -2704,10 +2836,10 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2726,7 +2858,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2764,15 +2896,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(25);
 } else {
-  module.exports = __webpack_require__(27);
+  module.exports = __webpack_require__(28);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2788,7 +2920,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(3),l=__webpack_require__(9),B=__webpack_require__(10),C=__webpack_require__(2),ba=__webpack_require__(11),da=__webpack_require__(12),ea=__webpack_require__(13),fa=__webpack_require__(14),ia=__webpack_require__(15),D=__webpack_require__(16);
+var aa=__webpack_require__(2),l=__webpack_require__(9),B=__webpack_require__(10),C=__webpack_require__(1),ba=__webpack_require__(11),da=__webpack_require__(12),ea=__webpack_require__(13),fa=__webpack_require__(14),ia=__webpack_require__(15),D=__webpack_require__(16);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -3008,7 +3140,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3023,7 +3155,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(26);
+var isNode = __webpack_require__(27);
 
 /**
  * @param {*} object The object to check.
@@ -3036,7 +3168,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3064,7 +3196,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3085,21 +3217,21 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(3);
+var React = __webpack_require__(2);
 var invariant = __webpack_require__(17);
 var warning = __webpack_require__(18);
 var ExecutionEnvironment = __webpack_require__(9);
 var _assign = __webpack_require__(10);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 var EventListener = __webpack_require__(11);
 var getActiveElement = __webpack_require__(12);
 var shallowEqual = __webpack_require__(13);
 var containsNode = __webpack_require__(14);
 var focusNode = __webpack_require__(15);
 var emptyObject = __webpack_require__(16);
-var checkPropTypes = __webpack_require__(28);
-var hyphenateStyleName = __webpack_require__(30);
-var camelizeStyleName = __webpack_require__(32);
+var checkPropTypes = __webpack_require__(29);
+var hyphenateStyleName = __webpack_require__(31);
+var camelizeStyleName = __webpack_require__(33);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18463,10 +18595,10 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18482,7 +18614,7 @@ module.exports = reactDom;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(17);
   var warning = __webpack_require__(18);
-  var ReactPropTypesSecret = __webpack_require__(29);
+  var ReactPropTypesSecret = __webpack_require__(30);
   var loggedTypeFailures = {};
 }
 
@@ -18530,10 +18662,10 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18552,7 +18684,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18567,7 +18699,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var hyphenate = __webpack_require__(31);
+var hyphenate = __webpack_require__(32);
 
 var msPattern = /^ms-/;
 
@@ -18594,7 +18726,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18630,7 +18762,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18645,7 +18777,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(33);
+var camelize = __webpack_require__(34);
 
 var msPattern = /^-ms-/;
 
@@ -18673,7 +18805,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18708,25 +18840,6 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18759,7 +18872,7 @@ if (process.env.NODE_ENV !== 'production') {
   module.exports = __webpack_require__(39)();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 36 */
@@ -18777,7 +18890,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 var assign = __webpack_require__(37);
 
-var ReactPropTypesSecret = __webpack_require__(34);
+var ReactPropTypesSecret = __webpack_require__(4);
 var checkPropTypes = __webpack_require__(38);
 
 var printWarning = function() {};
@@ -19322,7 +19435,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 37 */
@@ -19438,7 +19551,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(34);
+  var ReactPropTypesSecret = __webpack_require__(4);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -19518,7 +19631,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 39 */
@@ -19534,7 +19647,7 @@ module.exports = checkPropTypes;
 
 
 
-var ReactPropTypesSecret = __webpack_require__(34);
+var ReactPropTypesSecret = __webpack_require__(4);
 
 function emptyFunction() {}
 
@@ -19585,6 +19698,42 @@ module.exports = function() {
   return ReactPropTypes;
 };
 
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// 将一个毫秒数输出为 hh:mm:ss.ms格式
+
+var addZero = function addZero(time, num) {
+    if (time < Math.pow(10, num - 1)) {
+        var result = time;
+        for (var i = 1; i < num; i++) {
+            result = '0' + result;
+        }
+        return result.length === num ? result : result.slice(1);
+    }
+    return time;
+};
+
+var msToTime = function msToTime(milliseconds) {
+    var time = milliseconds;
+    var ms = milliseconds % 1000;
+    time = (milliseconds - ms) / 1000;
+    var seconds = time % 60;
+    time = (time - seconds) / 60;
+    var minutes = time % 60;
+    var hours = (time - minutes) / 60;
+    return addZero(hours, 2) + ':' + addZero(minutes, 2) + ':' + addZero(seconds, 2) + '.' + addZero(ms, 3);
+};
+
+exports.default = msToTime;
 
 /***/ })
 /******/ ]);
